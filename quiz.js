@@ -1,7 +1,7 @@
     var questions = [
         {
             question: "What is the capital of France?",
-            //audio:"music/Hunt.mp3",//
+            audio:"music/Hunt.mp3",
             options: ["Paris", "Berlin", "London", "Madrid"],
             correctAnswer: 0,
         },
@@ -36,9 +36,15 @@
         const question = questions[currentQuestionIndex];
         questionContainer.textContent = question.question;
 
-        //const audioElement = document.getElementById("question-audio");
-            //audioElement.src = question.audio;
-            //audioElement.load();
+        const audioElement = document.getElementById("question-container");
+        let musicPLayer = `
+                          <audio controls autoplay>
+                            <source src=${question.audio} type="audio/mpeg">
+                          Your browser does not support the audio element.
+                          </audio>
+                          `
+        audioElement.innerHTML = musicPLayer;
+
 
         optionsContainer.innerHTML = "";
         question.options.forEach((option, index) => {
