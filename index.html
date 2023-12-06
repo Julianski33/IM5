@@ -1,39 +1,31 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Local Quiz</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 20px;
-        }
-
-        #quiz-container {
-            display: none;
-        }
-
-        #summary {
-            margin-top: 20px;
-        }
-    </style>
-    <script src="quiz.js"></script>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Local Quiz</h1>
+  <header>
+    <h1>Audio Quiz</h1>
+  </header>
     <div id="start-container">
         <p>Click the button to start the quiz!</p>
         <button onclick="startQuiz()">Start Quiz</button>
     </div>
 
     <div id="quiz-container">
-        <div id="question-container"></div>
-        <div id="options-container"></div>
-        <button onclick="nextQuestion()">Next Question</button>
+    <div id="question-container">
+      <!--<audio id="question-audio" controls src"">
+        Your browser does not support the audio element.
+    </audio>-->
+  </div>
+    <div id="options-container"></div>
+    <button class="next-question" onclick="nextQuestion()">Next Question</button>
     </div>
 
     <div id="summary"></div>
+<script src="quiz.js"></script>
 </body>
 </html>
